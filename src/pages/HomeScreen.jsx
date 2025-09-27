@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { AlertTriangle, Shield, Phone, Navigation, MapPin, Activity, TrendingUp, Users, Clock, Zap, Droplets, Flame, Mountain, Mic, Volume2 } from 'lucide-react'
+import { AlertTriangle, Shield, Phone, Navigation, MapPin, Activity, TrendingUp, Users, Clock, Zap, Droplets, Flame, Mountain, Mic, Volume2, Building2, Satellite } from 'lucide-react'
 import { useLanguage } from '../hooks/useLanguage'
 import InteractiveMap from '../components/InteractiveMap'
 
@@ -313,11 +313,44 @@ const HomeScreen = () => {
         </motion.button>
       </motion.div>
 
-      {/* Quick Actions */}
+      {/* Government Decision System */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.5 }}
+        className="mx-4 mt-4"
+      >
+        <motion.button
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
+          onClick={() => window.location.href = '/government-system'}
+          className="w-full bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-2xl p-6 shadow-2xl cursor-pointer"
+        >
+          <div className="flex items-center space-x-4">
+            <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center">
+              <Building2 className="w-8 h-8" />
+            </div>
+            <div className="flex-1">
+              <h3 className="text-xl font-bold">Government Decision Support System</h3>
+              <p className="text-sm opacity-90 mt-1">Connecting NASA data with government institutions</p>
+              <div className="flex items-center space-x-2 mt-2">
+                <Satellite className="w-4 h-4" />
+                <span className="text-xs">NASA Data Integration</span>
+              </div>
+            </div>
+            <div className="text-right">
+              <div className="text-2xl font-bold">7</div>
+              <div className="text-xs opacity-75">Institutions</div>
+            </div>
+          </div>
+        </motion.button>
+      </motion.div>
+
+      {/* Quick Actions */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.6 }}
         className="mx-4 mt-4 grid grid-cols-2 gap-4"
       >
         <motion.div

@@ -9,6 +9,7 @@ import ProfileScreen from './pages/ProfileScreen'
 import EmergencyDetailScreen from './pages/EmergencyDetailScreen'
 import WeatherDetailScreen from './pages/WeatherDetailScreen'
 import OfflineScreen from './pages/OfflineScreen'
+import GovernmentDecisionSystem from './pages/GovernmentDecisionSystem'
 import BottomNavigation from './components/BottomNavigation'
 import { LanguageProvider } from './hooks/useLanguage'
 
@@ -28,6 +29,7 @@ function App() {
               <Route path="/emergency" element={<EmergencyDetailScreen />} />
               <Route path="/weather" element={<WeatherDetailScreen />} />
               <Route path="/offline" element={<OfflineScreen />} />
+              <Route path="/government-system" element={<GovernmentDecisionSystem />} />
             </Routes>
             <BottomNavigation />
           </div>
